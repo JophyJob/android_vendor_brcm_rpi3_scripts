@@ -22,9 +22,9 @@
 # https://github.com/RTAndroid/android_vendor_brcm_rpi3_scripts/blob/aosp-7.1/scripts/gapps.sh
 #
 
-TIMESTAMP="20170207"
+TIMESTAMP="20171007"
 VERSION="7.1"
-VARIANT="pico"
+VARIANT="tvstock"
 
 SHOW_HELP=false
 ADB_ADDRESS=""
@@ -129,6 +129,7 @@ prepare_gapps()
     if [ ! -d "gapps/pkg" ]; then
         echo " * Downloading OpenGApps package..."
         echo ""
+	echo https://github.com/opengapps/$ARCHITECTURE/releases/download/$TIMESTAMP/$PACKAGE_NAME 
         wget https://github.com/opengapps/$ARCHITECTURE/releases/download/$TIMESTAMP/$PACKAGE_NAME -O gapps/$PACKAGE_NAME
     fi
 
